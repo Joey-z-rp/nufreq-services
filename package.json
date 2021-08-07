@@ -9,8 +9,9 @@
     "dev": "cross-env NODE_ENV=development nodemon",
     "build": "tsc && tsc-alias",
     "test": "jest --forceExit --detectOpenHandles",
-    "lint": "eslint --ignore-path .gitignore --ext .ts src/",
-    "lint:fix": "npm run lint -- --fix && prettier --write ."
+    "eslint": "eslint --ignore-path .gitignore --ext .ts src/",
+    "lint": "npm run eslint && prettier --check .",
+    "lint:fix": "npm run eslint -- --fix && prettier --write ."
   },
   "dependencies": {
     "class-transformer": "^0.4.0",
